@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baper Bank!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="container mx-auto px-4 py-5 flex flex-wrap justify-between items-center"
+      >
+        <a href="#" class="text-4xl font-bold"
+          >Baper<span class="text-purple-900">Bank.</span>
+        </a>
+        <ul class="flex gap-10 items-center font-medium">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="money-section mt-10">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl text-center">
+            Let's get some
+            <span class="text-purple-900 font-bold">Moooooney</span>!!!
+          </h1>
+
+          <div class="area-wrapper md:w-3/4 mx-auto mt-14">
+            <!-- money card grid-->
+            <div class="grid sm:grid-cols-3 gap-4 text-white">
+              <!-- single card  -->
+              <div class="bg-green-300 rounded-md p-6">
+                <h4 class="text-xl">Deposit</h4>
+                <h3 class="text-3xl font-medium">
+                  $<span id="deposit-amount">00</span>
+                </h3>
+              </div>
+              <!-- single card  -->
+              <div class="bg-blue-300 rounded-md p-6">
+                <h4 class="text-xl">Withdraw</h4>
+                <h3 class="text-3xl font-medium">
+                  $<span id="withdraw-amount">00</span>
+                </h3>
+              </div>
+              <!-- single card  -->
+              <div class="bg-yellow-300 rounded-md p-6">
+                <h4 class="text-xl">Balance</h4>
+                <h3 class="text-3xl font-medium">
+                  $<span id="balance-amount">1200</span>
+                </h3>
+              </div>
+            </div>
+            <!-- card input grid  -->
+            <div class="grid sm:grid-cols-2 gap-4 mt-12">
+              <!-- single card input -->
+              <div class="bg-teal-100 rounded-md p-6">
+                <h3 class="text-xl mb-2">Please Deposit</h3>
+                <div class="mb-2">
+                  <input
+                    type="number"
+                    id="deposit-input"
+                    class="rounded border px-3 py-2 w-full focus:outline-none focus:shadow-outline text-gray-700"
+                    placeholder="Deposit amount"
+                  />
+                </div>
+                <button
+                  id="deposit-btn"
+                  class="deposit-btn py-2 px-6 bg-blue-800 hover:bg-blue-700 text-lg font-bold rounded-md text-white"
+                >
+                  Deposit
+                </button>
+              </div>
+              <!-- single card input -->
+              <div class="bg-blue-100 rounded-md p-6">
+                <h3 class="text-xl mb-2">Please Withdraw</h3>
+                <div class="mb-2">
+                  <input
+                    type="number"
+                    id="withdraw-input"
+                    class="rounded border px-3 py-2 w-full focus:outline-none focus:shadow-outline text-gray-700"
+                    placeholder="Withdraw amount"
+                  />
+                </div>
+                <button
+                  id="withdraw-btn"
+                  class="deposit-btn py-2 px-6 bg-blue-800 hover:bg-blue-700 text-lg font-bold rounded-md text-white"
+                >
+                  Withdraw
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="banking.js"></script>
+  </body>
+</html>
