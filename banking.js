@@ -14,13 +14,38 @@ depositButton.addEventListener("click", function () {
   //adding value with deposit amount
   const depositNewAmount = depositPrevAmount + depositInputAmount;
   depositAmount.innerText = depositNewAmount;
-  // const totalDepositText = depositAmount.innerText;
-  // const totalDepositAmount = parseFloat(totalDepositText);
 
-  //adding deposit to balance amount
+  //adding deposit to balance amount and balance input
   const balance = document.getElementById("balance-amount");
   const balanceAmountText = balance.innerText;
   const balanceAmountAmount = parseFloat(balanceAmountText);
   const totalBalance = depositInputAmount + balanceAmountAmount;
   balance.innerText = totalBalance;
+});
+
+const withdrawButton = document.getElementById("withdraw-btn");
+withdrawButton.addEventListener("click", function () {
+  // withdraw amount
+  const withdrawAmount = document.getElementById("withdraw-amount");
+  const withdrawPrevAmountText = withdrawAmount.innerText;
+  const withdrawPrevAmount = parseFloat(withdrawPrevAmountText);
+
+  //withdraw input
+  const withdrawInput = document.getElementById("withdraw-input");
+  const withdrawInputText = withdrawInput.value;
+  const withdrawInputAmount = parseFloat(withdrawInputText);
+  withdrawInput.value = "";
+
+  //adding value with withdrae amount and withdraw input
+  const withdrawNewAmount = withdrawPrevAmount + withdrawInputAmount;
+  withdrawAmount.innerText = withdrawNewAmount;
+
+  //minus withdraw to balance amount and balance input
+  const balance = document.getElementById("balance-amount");
+  const balanceAmountText = balance.innerText;
+  const balanceAmountAmount = parseFloat(balanceAmountText);
+  const totalBalance = balanceAmountAmount - withdrawInputAmount;
+  balance.innerText = totalBalance;
+
+  // condition
 });
